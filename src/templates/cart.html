@@ -70,7 +70,7 @@
                             </button>
                         </li>
                         <li class="ml-6">
-                            <a href="cart.html"
+                            <a href="cart.html" id="header-cart"
                                 class="flex items-center justify-center w-8 h-8 text-black hover:text-white cart cart-filled">
                                 <svg class="fill-current" width="29" height="25" viewBox="0 0 29 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -116,36 +116,283 @@
     <section class="md:py-16">
         <div class="container mx-auto px-4">
             <div class="flex -mx-4 flex-wrap">
-                <!-- START: Shipping Cart -->
-                <div class="w-full px-4 mb-4 md:w-8/12 md:mb-0">
+                            <!-- START: Shipping Cart -->
+                <div class="w-full px-4 mb-4 md:w-8/12 md:mb-0" id="shopping-cart">
                     <div class="flex flex-start mb-4 mt-8 pb-3 border-b border-gray-200 md:border-b-0">
                         <h3 class="text-2xl">
                             Shopping Cart
                         </h3>
                     </div>
-                    <div class="border-b border-gray-200 mb-4 md:block">
-                        <div class="flex flex-start items-center pb-2 -mx-4">
+                    <div class="border-b border-gray-200 mb-4 hidden md:block">
+                        <!-- START: Table Title -->
+                        <div class="flex flex-start items-center pb-2 -mx-4 ">
                             <div class="px-4 flex-none">
                                 <div class="" style="width: 90px;">
-                                <h6>Photo</h6>
-                            </div>
+                                    <h6>Photo</h6>
+                                </div>
                             </div>
                             <div class="px-4 w-5/12">
                                 <div class="">
-                                <h6>Photo</h6>
+                                    <h6>Product</h6>
+                                </div>
                             </div>
+                            <div class="px-4 w-5/12">
+                                <div class="">
+                                    <h6>Price</h6>
+                                </div>
+                            </div>
+                            <div class="px-4 w-2/12">
+                                <div class="text-center">
+                                    <h6>Action</h6>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <!-- END: Table Title -->
+
+                    <!-- START: Cart empty wrapper -->
+                    <p id="cart-empty" class="hidden text-center py-8">Your shopping cart is empty. <a href="details.html" class="underline">Shop Now!</a></p>
+                    <!-- END: Cart empty wrapper -->
+
+
+                    <!-- Start: Table Item 1 -->
+                    <div class="flex flex-start flex-wrap items-center mb-4 -mx-4" data-row="1">
+                        <div class="" style="width: 90px; height: 90px;">
+                            <img src="../images/content/chair1.jpg" alt=""
+                                class="object-cover rounded-xl w-full h-full">
+                        </div>
+                        <div class="px-4 w-auto md:w-5/12 flex-1">
+                            <div class="">
+                                <h6 class="font-semibold text-lg md:text-xl leading-8">
+                                    Saman Kakka
+                                </h6>
+                                <span class="text-sm md:text-lg">Office Room</span>
+                                <h6 class="font-semibold text-base md:text-lg block md:hidden">
+                                    IDR.29.000.000
+                                </h6>
+                            </div>
+
+                        </div>
+                        <div class="px-4 w-auto md:w-5/12 flex-none md:flex-1 hidden md:block">
+                            <div class="">
+                                <h6 class="font-semibold text-lg">
+                                    IDR.29.000.000
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="px-4 w-2/12">
+                            <div class="text-center">
+                                <button data-delete-item="1" class="text-red-600 border-none focus:outline-none px-3 py-1">X</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Table Item 1 -->
+                    <!-- START: Table Item 2 -->
+                    <div class="flex flex-start flex-wrap items-center mb-4 -mx-4" data-row="2">
+                        <div class="" style="width: 90px; height: 90px;">
+                            <img src="../images/content/chair1.jpg" alt=""
+                                class="object-cover rounded-xl w-full h-full">
+                        </div>
+                        <div class="px-4 w-auto md:w-5/12 flex-1">
+                            <div class="">
+                                <h6 class="font-semibold text-lg md:text-xl leading-8">
+                                    Green Seat
+                                </h6>
+                                <span class="text-sm md:text-lg">Office Room</span>
+                                <h6 class="font-semibold text-base md:text-lg block md:hidden">
+                                    IDR.12.500.000
+                                </h6>
+                            </div>
+
+                        </div>
+                        <div class="px-4 w-auto md:w-5/12 flex-none md:flex-1 hidden md:block">
+                            <div class="">
+                                <h6 class="font-semibold text-lg">
+                                    IDR.12.500.000
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="px-4 w-2/12">
+                            <div class="text-center">
+                                <button data-delete-item="2" class="text-red-600 border-none focus:outline-none px-3 py-1">X</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Table Item 2 -->
+                    <!-- START: Table Item 3 -->
+                    <div class="flex flex-start flex-wrap items-center mb-4 -mx-4" data-row="3">
+                        <div class="" style="width: 90px; height: 90px;">
+                            <img src="../images/content/chair1.jpg" alt=""
+                                class="object-cover rounded-xl w-full h-full">
+                        </div>
+                        <div class="px-4 w-auto md:w-5/12 flex-1">
+                            <div class="">
+                                <h6 class="font-semibold text-lg md:text-xl leading-8">
+                                    Pacific
+                                </h6>
+                                <span class="text-sm md:text-lg">Office Room</span>
+                                <h6 class="font-semibold text-base md:text-lg block md:hidden">
+                                    IDR.88.000.000
+                                </h6>
+                            </div>
+
+                        </div>
+                        <div class="px-4 w-auto md:w-5/12 flex-none md:flex-1 hidden md:block">
+                            <div class="">
+                                <h6 class="font-semibold text-lg">
+                                    IDR.88.000.000
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="px-4 w-2/12">
+                            <div class="text-center">
+                                <button data-delete-item="3" class="text-red-600 border-none focus:outline-none px-3 py-1">X</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Table Item 3 -->
                 </div>
                 <!-- END: Shipping Cart -->
 
                 <!-- START: Shipping Details-->
+                <div class="w-full md:px-4 md:w-4/12" id="shipping-detail">
+                    <div class="bg-gray-100 px-4 py-6 md:p-8 md:rounded-3xl">
+                        <form action="succes.html">
+                            <div class="flex flex-start mb-6">
+                                <h3 class="text-2xl">Shipping Details</h3>
+                            </div>
+                            <!-- START: Input Complete Name 1-->
+                            <div class="flex flex-col mb-4">
+                                <label for="complete-name" class="text-sm mb-2">
+                                    Complete Name
+                                </label>
+                                <input data-input type="text" id="complete-name"
+                                    class="border border-gray-200 rounded-lg px-4 py-2 bg-white text-small focus:border-blue-200 focus:outline-none"
+                                    placeholder="Input your name" />
+                            </div>
+                            <!-- END: Input Complete Name 1 -->
+                            <!-- START: Email Address 2-->
+                            <div class="flex flex-col mb-4">
+                                <label for="email-address" class="text-sm mb-2">
+                                    Email Address
+                                </label>
+                                <input data-input type="email" id="email-address"
+                                    class="border border-gray-200 rounded-lg px-4 py-2 bg-white text-small focus:border-blue-200 focus:outline-none"
+                                    placeholder="Input your email address" />
+                            </div>
+                            <!-- END: Email Address 2 -->
+                            <!-- START: Address-->
+                            <div class="flex flex-col mb-4">
+                                <label for="address" class="text-sm mb-2">
+                                    Address
+                                </label>
+                                <input data-input type="text" id="address"
+                                    class="border border-gray-200 rounded-lg px-4 py-2 bg-white text-small focus:border-blue-200 focus:outline-none"
+                                    placeholder="Input your address" />
+                            </div>
+                            <!-- END:Address  -->
+                            <!-- START: Phone Number-->
+                            <div class="flex flex-col mb-4">
+                                <label for="phone-number" class="text-sm mb-2">
+                                    Phone Number
+                                </label>
+                                <input data-input type="tel" id="phone-number"
+                                    class="border border-gray-200 rounded-lg px-4 py-2 bg-white text-small focus:border-blue-200 focus:outline-none"
+                                    placeholder="Input your Phone Number" />
+                            </div>
+                            <!-- END:Phone Number  -->
 
+                            <!-- START: Choose Courier-->
+                            <div class="flex flex-col mb-4">
+                                <label class="text-sm mb-2">
+                                    Choose Courier
+                                </label>
+                                <div class="flex -mx-2 flex-wrap">
+                                    <!-- START: Courier 1-->
+                                    <div class="px-2 w-6/12 h-24 mb-4">
+                                        <button data-value="dhl"
+                                        data-name="courier" type="button"
+                                            class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full">
+                                            <img src="../images/content/courier/logo-dhl.png" alt="dhl"
+                                                class="object-cover h-full w-full" />
+                                        </button>
+                                    </div>
+                                    <!--  END: Courier 1-->
+                                    <!-- START: Courier 2-->
+                                    <div class="px-2 w-6/12 h-24 mb-4">
+                                        <button data-value="fedex"
+                                        data-name="courier" type="button"
+                                            class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full">
+                                            <img src="../images/content/courier/logo-fedex.png" alt="fedex"
+                                                class="object-cover h-full w-full" />
+                                        </button>
+                                    </div>
+                                    <!--  END: Courier 2-->
+                                </div>
+                            </div>
+                            <!-- END:Choose Courier  -->
+
+                            <!-- START: Choose Payment-->
+                            <div class="flex flex-col mb-4">
+                                <label class="text-sm mb-2">
+                                    Choose Payment
+                                </label>
+                                <div class="flex -mx-2 flex-wrap">
+                                    <!-- START: Payment 1-->
+                                    <div class="px-2 w-6/12 h-24 mb-4">
+                                        <button data-value="midtrans"
+                                        data-name="payment" type="button"
+                                            class="border border-gray-200 border-t-2 border-b-2 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full ">
+                                            <img src="../images/content/payment/logo-midtrans.png" alt="dhl"
+                                                class="object-contain max-h-full" />
+                                        </button>
+                                    </div>
+                                    <!--  END: Payment 1-->
+                                    <!-- START: Payment 2-->
+                                    <div class="px-2 w-6/12 h-24 mb-4">
+                                        <button data-value="mastercard"
+                                        data-name="payment" type="button"
+                                            class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full">
+                                            <img src="../images/content/payment/logo-mastercard.png" alt="mastercard"
+                                                class="object-cover h-full w-full" />
+                                        </button>
+                                    </div>
+                                    <!--  END: Payment 2-->
+                                    <!-- START: Payment 3-->
+                                    <div class="px-2 w-6/12 h-24 mb-4">
+                                        <button data-value="bitcoin"
+                                        data-name="payment" type="button"
+                                            class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full">
+                                            <img src="../images/content/payment/logo-bitcoin.png" alt="mastercard"
+                                                class="object-cover h-full w-full" />
+                                        </button>
+                                    </div>
+                                    <!--  END: Payment 3-->
+                                    <!-- START: Payment 4-->
+                                    <div class="px-2 w-6/12 h-24 mb-4">
+                                        <button data-value="american-express"
+                                        data-name="payment" type="button"
+                                            class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full">
+                                            <img src="../images/content/payment/logo.png" alt="mastercard"
+                                                class="object-cover h-full w-full" />
+                                        </button>
+                                    </div>
+                                    <!--  END: Payment 4-->
+                                </div>
+                            </div>
+                            <!-- END:Choose Payment  -->
+                            <div class="text-center">
+                                <button disabled type="submit" class="bg-pink-400 text-black focus:bg-black focus:outline-none w-full py-3 rounded-full text-lg focus:text-pink-400 transition-all duration-200 px-6">Checkout Now</button>
+                            </div>
+                        </form>
+
+                     
+                    </div>
+                </div>
                 <!-- END: Shipping Details-->
 
             </div>
-        </div>
+        </div> 
     </section>
 
 
@@ -157,7 +404,7 @@
     <!-- START: Aside Menu / Footer -->
 
     <section>
-        <div class=" border-b border-gray-200 py-12 px-4">
+        <div class=" border-b border-t border-gray-200 py-12 px-4">
             <div class="flex justify-center mb-8">
                 <img src="images/design/logo.svg" alt="luxspace - Adalah sebuah website yang menjual barang-barang" />
             </div>
@@ -228,13 +475,15 @@
                         <form action="#">
                             <label for="" class="relative w-full">
                                 <input type="text" class="bg-gray-100 rounded-xl py-3 px-5 w-full focus:outline-none"
-                                    placeholder="Your emai address" />
-                                <button class="bg-pink-400 absolute rounded-xl right-0 p-3 text-white"><svg width="45"
-                                        height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                        class="fill-current">
+                                    placeholder="Your email address" />
+                                <button class="bg-pink-400 absolute rounded-xl right-0 p-3 text-white">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="fill-current">
                                         <path
-                                            d="M33.6177 11.412C33.6163 11.4106 33.6152 11.4092 33.6138 11.4078C33.6124 11.4065 33.6109 11.4054 33.6095 11.4042C33.236 11.0493 32.7002 10.9427 32.2098 11.1264L10.8339 19.1335C10.2687 19.3452 9.93766 19.8752 10.0098 20.4523C10.0821 21.0294 10.5346 21.4694 11.1359 21.547L21.5833 22.8968C21.6028 22.8994 21.6185 22.9143 21.6212 22.9332L23.0301 32.9417C23.1112 33.5177 23.5704 33.9512 24.1729 34.0204C24.2279 34.0268 24.2824 34.0298 24.3364 34.0298C24.8735 34.0298 25.3486 33.7229 25.5495 33.231L33.9077 12.7527C34.0994 12.283 33.9882 11.7698 33.6177 11.412ZM11.3053 20.3447C11.2819 20.3417 11.2714 20.3404 11.2673 20.3079C11.2632 20.2754 11.2732 20.2716 11.2951 20.2635L31.2946 12.7719L21.9404 21.7333C21.8794 21.7163 11.3053 20.3447 11.3053 20.3447ZM24.37 32.7892C24.3614 32.8102 24.358 32.8198 24.3236 32.8158C24.2897 32.8119 24.2883 32.8017 24.2852 32.7794C24.2852 32.7794 22.8535 22.6495 22.8358 22.5911L32.19 13.6297L24.37 32.7892Z" />
+                                            d="M23.6177 0.412215C23.6163 0.410868 23.6152 0.409431 23.6138 0.408084C23.6124 0.406736 23.6109 0.405659 23.6095 0.404401C23.236 0.0495511 22.7002 -0.0570567 22.2098 0.126655L0.833871 8.13378C0.268743 8.34542 -0.0623361 8.87545 0.0098048 9.45254C0.0821332 10.0297 0.53462 10.4696 1.13589 10.5473L11.5833 11.8971C11.6028 11.8996 11.6185 11.9145 11.6212 11.9334L13.0301 21.9419C13.1112 22.5179 13.5704 22.9515 14.1729 23.0207C14.2279 23.027 14.2824 23.03 14.3364 23.03C14.8735 23.03 15.3486 22.7231 15.5495 22.2313L23.9077 1.75298C24.0994 1.28326 23.9882 0.770074 23.6177 0.412215ZM1.30534 9.34499C1.2819 9.34194 1.27136 9.34064 1.26728 9.30812C1.26325 9.27561 1.27319 9.27184 1.29508 9.26371L21.2946 1.77211L11.9404 10.7335C11.8794 10.7166 1.30534 9.34499 1.30534 9.34499ZM14.37 21.7894C14.3614 21.8104 14.358 21.8201 14.3236 21.816C14.2897 21.8122 14.2883 21.802 14.2852 21.7797C14.2852 21.7797 12.8535 11.6497 12.8358 11.5913L22.19 2.62996L14.37 21.7894Z"
+                                            fill="white" />
                                     </svg>
+
                                 </button>
                             </label>
                         </form>
@@ -250,14 +499,14 @@
     <!-- START: Footer -->
     <footer class="flex text-center px-4 py-8 justify-center">
         <p class="text-sm">
-            Copyright 2024 • All Rights Reserved LuxSpace by Rizky Anugrah
+            <i class="fa-regular fa-copyright"></i> 2024 • Created With <i class="fa-solid fa-heart" style="color: #fa0000;"></i> by Rizky Anugrah
         </p>
     </footer>
     <!-- END: Footer -->
 
 
 
-    <div class="min-h-screen"></div>
+  
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
         window.ga = function () {
@@ -271,6 +520,7 @@
         ga("send", "pageview");
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <script src="https://kit.fontawesome.com/c1d2872a82.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

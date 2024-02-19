@@ -12,17 +12,6 @@ const carouselItems = carouselId?.getElementsByClassName("flex")[0];
 const carouselContainer = carouselId?.getElementsByClassName("container")[0];
 
 // Variabel global untuk menyimpan state pergerakan dan tampilan carousel
-let posX1 = 0,
-  posX2 = 0,
-  posInitial,
-  posFinal,
-  threshold = 100,
-  itemToShow = 4,
-  slides = carouselItems.getElementsByClassName("card"),
-  slidesLength = slides.length, // Jumlah elemen dalam carousel
-  slideSize = carouselItems.getElementsByClassName("card")[0].offsetWidth,
-  index = 0,
-  allowShift = true;
 
 // Fungsi untuk menghitung dan mengatur offset carousel berdasarkan posisi container
 function carouselCalculateOffset() {
@@ -33,14 +22,26 @@ function carouselCalculateOffset() {
 
 // Fungsi utama untuk mengatur interaksi pengguna dan pergerakan carousel
 function slide(wrapper, items) {
-  // Menambahkan kelas "loaded" ke wrapper carousel
+  let posX1 = 0,
+  posX2 = 0,
+  posInitial,
+  posFinal,
+  threshold = 100,
+  itemToShow = 4,
+  slides = items.getElementsByClassName("card"), 
+  slidesLength = slides.length, // Jumlah elemen dalam carousel
+  slideSize = items.getElementsByClassName("card")[0].offsetWidth,
+  index = 0,
+  allowShift = true;
   wrapper.classList.add("loaded");
 
   // Menambahkan event listener untuk berbagai peristiwa
-  items.addEventListener("mousedown", dragStart);
+  items.onmousedown = dragStart;
+
   items.addEventListener("touchstart", dragStart);
   items.addEventListener("touchend", dragEnd);
   items.addEventListener("touchmove", dragAction);
+
   items.addEventListener("transitionend", checkIndex);
 
   // Fungsi untuk menangani awal peristiwa drag/touch
@@ -107,10 +108,11 @@ function slide(wrapper, items) {
       if (!action) posInitial = items.offsetLeft;
 
       // Menggeser elemen carousel berdasarkan arah pergerakan
-      items.style.left = `${posInitial - direction * slideSize}px`;
+      if(direction == 1){
+      items.style.left = `${posInitial - direction * slideSize}px`; index++;
+    } else if(direction == -1){ `${posInitial + direction * slideSize}px`; index--;
+      }
 
-      // Menyesuaikan indeks carousel
-      index += direction;
     }
 
     // Menonaktifkan pergerakan sementara
@@ -125,18 +127,18 @@ function slide(wrapper, items) {
     }, 200);
 
     // Menyesuaikan posisi dan indeks jika mencapai batas kiri atau kanan carousel
-    if (index === -1) {
+    if (index == -1) {
       items.style.left = `-${slidesLength * slideSize}px`;
       index = slidesLength - 1;
     }
 
-    if (index === slidesLength - itemToShow) {
+    if (index == slidesLength - itemToShow) {
       items.style.left = `-${(slidesLength - itemToShow - 1) * slideSize}px`;
       index = slidesLength - itemToShow - 1;
     }
 
     // Jika mencapai batas akhir kanan atau kiri, reset posisi carousel
-    if (index === slidesLength || index === slidesLength - 1) {
+    if (index == slidesLength || index == slidesLength - 1) {
       items.style.left = "0px";
       index = 0;
     }
