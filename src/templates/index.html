@@ -70,7 +70,7 @@
               </button>
             </li>
             <li class="ml-6">
-              <a href="" class="flex items-center justify-center w-8 h-8 text-black hover:text-white">
+              <a href="cart.html" class="flex items-center justify-center w-8 h-8 text-black hover:text-white cart cart-filled">
                 <svg class="fill-current" width="29" height="25" viewBox="0 0 29 25" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -83,8 +83,11 @@
                     d="M18.9414 11.1324H10.8089C10.4572 11.1324 10.1721 11.4223 10.1721 11.78C10.1721 12.1377 10.4572 12.4276 10.8089 12.4276H18.9413C19.293 12.4276 19.5781 12.1377 19.5781 11.78C19.5781 11.4224 19.293 11.1324 18.9414 11.1324Z" />
                   <path
                     d="M25.6499 4.88404C25.407 4.58092 25.0472 4.40711 24.6626 4.40711H4.82655L4.42595 2.42947C4.34232 2.01694 4.06563 1.67055 3.68565 1.50276L0.890528 0.268963C0.567841 0.126419 0.192825 0.276999 0.0528584 0.60505C-0.0872597 0.933204 0.0608116 1.31463 0.383347 1.45696L3.17852 2.69081L6.2598 17.9014C6.38117 18.5004 6.90578 18.9352 7.50723 18.9352H22.7635C23.1152 18.9352 23.4003 18.6452 23.4003 18.2876C23.4003 17.9299 23.1152 17.64 22.7635 17.64H7.50728L7.13247 15.7897H22.8814C23.4828 15.7897 24.0075 15.3549 24.1288 14.7559L25.9101 5.96349C25.9876 5.58063 25.8928 5.1871 25.6499 4.88404ZM22.8814 14.4946H6.87012L5.08895 5.70226L24.6626 5.70231L22.8814 14.4946Z" />
-                  <circle cx="25" cy="4.89023" r="4" fill="#F9CADA" class="cart-filled" />
-                </svg>
+                    <g class="text-pink-400"> 
+                      <circle cx="25" cy="4.89023" r="4" fill="#F9CADA" class="cart-filled dot" />
+                    </svg>
+                    </g>
+                 
 
               </a>
             </li>
@@ -137,7 +140,7 @@
         <h3 class="text-2xl capitalize font-semibold">browse the room <br class="" />that we designed for you</h3>
       </div>
       <div class="grid grid-rows-2 grid-cols-9 gap-4">
-       
+
         <!-- START: Item Browse the room 1 -->
         <div class="relative col-span-9 row-span-1 md:col-span-4 card" style="height: 180px;">
           <div class="card-shadow rounded-xl">
@@ -162,9 +165,10 @@
             <img src="../images/content/image-catalog-4.jpg" alt="" srcset=""
               class="w-full h-full object-cover overlay overflow-hidden rounded-xl">
           </div>
-          <div class="overlay inset-0 md:bottom-auto flex justify-center md:items-center flex-col pl-48 md:pl-0 pt-0 md:pt-12">
+          <div
+            class="overlay inset-0 md:bottom-auto flex justify-center md:items-center flex-col pl-48 md:pl-0 pt-0 md:pt-12">
             <h5 class="text-lg font-semibold">
-             Decoration
+              Decoration
             </h5>
             <span class="">12.000 items</span>
           </div>
@@ -175,12 +179,13 @@
         <!-- End: Item Browse the room 2 -->
 
         <!-- START: Item Browse the room 3 -->
-        <div class="relative col-span-9 row-span-1 md:col-span-3 md:row-span-2 card" >
+        <div class="relative col-span-9 row-span-1 md:col-span-3 md:row-span-2 card">
           <div class="card-shadow rounded-xl">
             <img src="../images/content/image-catalog-3.jpg" alt="" srcset=""
               class="w-full h-full object-cover overlay overflow-hidden rounded-xl">
           </div>
-          <div class="overlay inset-0 md:bottom-auto flex justify-center md:items-center flex-col pl-48 md:pl-0 pt-0 md:pt-12">
+          <div
+            class="overlay inset-0 md:bottom-auto flex justify-center md:items-center flex-col pl-48 md:pl-0 pt-0 md:pt-12">
             <h5 class="text-lg font-semibold">
               Bedroom
             </h5>
@@ -192,14 +197,14 @@
         </div>
         <!-- End: Item Browse the room 3 -->
         <!-- START: Item Browse the room 4 -->
-        <div class="relative col-span-9 row-span-1 md:col-span-4 card" >
+        <div class="relative col-span-9 row-span-1 md:col-span-4 card">
           <div class="card-shadow rounded-xl">
             <img src="../images/content/image-catalog-2.jpg" alt="" srcset=""
               class="w-full h-full object-cover overlay overflow-hidden rounded-xl">
           </div>
           <div class="overlay left-0 top-0 bottom-0 flex justify-center flex-col pl-48 md:pl-72">
             <h5 class="text-lg font-semibold">
-             Children Room
+              Children Room
             </h5>
             <span class="">12.000 items</span>
           </div>
@@ -213,11 +218,8 @@
   </section>
   <!-- End: Browse The Room -->
 
-    <div class="min-h-screen"></div>
-
-
   <!-- Start: Just Arive -->
-  <!-- <section class="flex flex-col py-16">
+  <section class="flex flex-col py-16">
     <div class="container mx-auto mb-4">
       <div class="flex justify-center text-center mb-4">
         <h3 class="text-2xl capitalize font-semibold">
@@ -227,25 +229,210 @@
       </div>
     </div>
     <div class="overflow-x-hidden px-4" id="carousel">
-      <div class="container mx-auto">
+      <div class="container mx-auto"></div>
 
-        <div class="flex -mx-4 flex-row relative">
-          <div class="px-4 relative card">
-            <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
-              <img src="" alt="">
-            </div>
+      <div class="flex -mx-4 flex-row relative">
+        <!-- START:  item carousel 1-->
+        <div class="px-4 relative card">
+          <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
+            <img src="../images/content/img-carousel-1.png" alt="cangkir"
+              class="w-full h-full object-cover object-center">
           </div>
+          <h5 class="text-lg font-semibold mt-4">Cangkir Kopi</h5>
+          <span class="">IDR 89.300</span>
+
         </div>
+        <!-- End:  item carousel 1-->
+
+        <!-- START:  item carousel 2-->
+        <div class="px-4 relative card">
+          <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
+            <img src="../images/content/img-carousel-2.png" alt="cangkir"
+              class="w-full h-full object-cover object-center">
+          </div>
+          <h5 class="text-lg font-semibold mt-4">Bankyu Minimax</h5>
+          <span class="">IDR 167.300</span>
+
+        </div>
+        <!-- End:  item carousel 2-->
+
+        <!-- START:  item carousel 3-->
+        <div class="px-4 relative card">
+          <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
+            <img src="../images/content/img-carousel-3.png" alt="cangkir"
+              class="w-full h-full object-cover object-center">
+          </div>
+          <h5 class="text-lg font-semibold mt-4">Buku Sidu Edition</h5>
+          <span class="">IDR 12.000</span>
+
+        </div>
+        <!-- End:  item carousel 3-->
+
+        <!-- START:  item carousel 4-->
+        <div class="px-4 relative card">
+          <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
+            <img src="../images/content/img-carousel-4.png" alt="cangkir"
+              class="w-full h-full object-cover object-center">
+          </div>
+          <h5 class="text-lg font-semibold mt-4">watch Note X</h5>
+          <span class="">IDR 73.000</span>
+
+        </div>
+        <!-- End:  item carousel 4-->
+
+        <!-- START:  item carousel 5-->
+        <div class="px-4 relative card">
+          <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
+            <img src="../images/content/img-carousel-5.png" alt="cangkir"
+              class="w-full h-full object-cover object-center">
+          </div>
+          <h5 class="text-lg font-semibold mt-4">Racking Planst</h5>
+          <span class="">IDR 80.000</span>
+
+        </div>
+        <!-- End:  item carousel 5-->
+
+        <!-- START:  item carousel 3-->
+        <div class="px-4 relative card">
+          <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
+            <img src="../images/content/img-carousel-3.png" alt="cangkir"
+              class="w-full h-full object-cover object-center">
+          </div>
+          <h5 class="text-lg font-semibold mt-4">Buku Sidu Edition</h5>
+          <span class="">IDR 12.000</span>
+
+        </div>
+        <!-- End:  item carousel 3-->
+
       </div>
+
     </div>
-  </section> -->
+  </section>
 
   <!-- End: Just Arive -->
 
+  <!-- Start Clients -->
+  <section class="container mx-auto">
+    <div class="flex justify-center flex-wrap">
+      <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4">
+        <img src="../images/content/logo-adobe.png" alt="logo adome" class="mx-auto" />
+      </div>
+      <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4">
+        <img src="../images/content/Logo-ikea.png" alt="logo adome" class="mx-auto" />
+      </div>
+      <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4">
+        <img src="../images/content/logo-hermanmiller.png" alt="logo adome" class="mx-auto" />
+      </div>
+      <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4">
+        <img src="../images/content/logo-miele.png" alt="logo adome" class="mx-auto" />
+      </div>
+    </div>
+  </section>
+  <!-- End Clients -->
+
+  <!-- START: Aside Menu / Footer -->
+
+  <section>
+    <div class="border-t border-b border-gray-200 py-12 mt-16 px4">
+      <div class="flex justify-center mb-8">
+        <img src="images/design/logo.svg" alt="luxspace - Adalah sebuah website yang menjual barang-barang" />
+      </div>
+      <aside class="container mx-auto">
+        <div class="flex flex-wrap md:space-x-4 justify-center">
+          <!-- START: Item aside menu 1-->
+          <div class="w-full md:w-2/12 mb-4 md:mb-0 accordion">
+            <h5 class="text-xl font-semibold mb-2 relative">
+              Overview
+            </h5>
+            <ul class="h-0 invisible md:h-auto md:visible overflow-hidden">
+              <li>
+                <a href="" class="hover:underline py-1 block">Shipping</a>
+              </li>
+              <li>
+                <a href="" class="hover:underline py-1 block">Refund</a>
+              </li>
+              <li>
+                <a href="" class="hover:underline py-1 block">Promotion</a>
+              </li>
+            </ul>
+          </div>
+          <!-- END: Item aside menu 1-->
+
+          <!-- START: Item aside menu 2-->
+          <div class="w-full md:w-2/12 mb-4 md:mb-0 accordion">
+            <h5 class="text-xl font-semibold mb-2 relative">
+              Company
+            </h5>
+            <ul class="h-0 invisible md:h-auto md:visible overflow-hidden">
+              <li>
+                <a href="" class="hover:underline py-1 block">About</a>
+              </li>
+              <li>
+                <a href="" class="hover:underline py-1 block">Career</a>
+              </li>
+              <li>
+                <a href="" class="hover:underline py-1 block">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <!-- END: Item aside menu 2-->
+
+          <!-- START: Item aside menu 3-->
+          <div class="w-full md:w-2/12 mb-4 md:mb-0 accordion">
+            <h5 class="text-xl font-semibold mb-2 relative">
+              Explore
+            </h5>
+            <ul class="h-0 invisible md:h-auto md:visible overflow-hidden">
+              <li>
+                <a href="" class="hover:underline py-1 block">Terms & Condition</a>
+              </li>
+              <li>
+                <a href="" class="hover:underline py-1 block">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="" class="hover:underline py-1 block">For Developer</a>
+              </li>
+            </ul>
+          </div>
+          <!-- END: Item aside menu 3-->
+
+          <!-- START: Item aside menu 4-->
+          <div class="w-full md:w-3/12 mb-4 md:mb-0">
+            <h5 class="text-xl font-semibold mb-2 relative">
+              Special Letter
+            </h5>
+            <form action="#">
+              <label for="" class="relative w-full">
+                <input type="text" class="bg-gray-100 rounded-xl py-3 px-5 w-full focus:outline-none"
+                  placeholder="Your emai address" />
+                <button class="bg-pink-400 absolute rounded-xl right-0 p-3 text-white"><svg width="45" height="45"
+                    viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-current">
+                    <path
+                      d="M33.6177 11.412C33.6163 11.4106 33.6152 11.4092 33.6138 11.4078C33.6124 11.4065 33.6109 11.4054 33.6095 11.4042C33.236 11.0493 32.7002 10.9427 32.2098 11.1264L10.8339 19.1335C10.2687 19.3452 9.93766 19.8752 10.0098 20.4523C10.0821 21.0294 10.5346 21.4694 11.1359 21.547L21.5833 22.8968C21.6028 22.8994 21.6185 22.9143 21.6212 22.9332L23.0301 32.9417C23.1112 33.5177 23.5704 33.9512 24.1729 34.0204C24.2279 34.0268 24.2824 34.0298 24.3364 34.0298C24.8735 34.0298 25.3486 33.7229 25.5495 33.231L33.9077 12.7527C34.0994 12.283 33.9882 11.7698 33.6177 11.412ZM11.3053 20.3447C11.2819 20.3417 11.2714 20.3404 11.2673 20.3079C11.2632 20.2754 11.2732 20.2716 11.2951 20.2635L31.2946 12.7719L21.9404 21.7333C21.8794 21.7163 11.3053 20.3447 11.3053 20.3447ZM24.37 32.7892C24.3614 32.8102 24.358 32.8198 24.3236 32.8158C24.2897 32.8119 24.2883 32.8017 24.2852 32.7794C24.2852 32.7794 22.8535 22.6495 22.8358 22.5911L32.19 13.6297L24.37 32.7892Z" />
+                  </svg>
+                </button>
+              </label>
+            </form>
+          </div>
+          <!-- END: Item aside menu 4-->
+
+        </div>
+      </aside>
+    </div>
+  </section>
+  <!-- END: Aside Menu / Footer -->
+
+  <!-- START: Footer -->
+  <footer class="flex text-center px-4 py-8 justify-center">
+    <p class="text-sm">
+      Copyright 2024 • All Rights Reserved LuxSpace by Rizky Anugrah
+    </p>
+  </footer>
+    <!-- END: Footer -->
 
 
 
-
+  <div class="min-h-screen"></div>
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () {
